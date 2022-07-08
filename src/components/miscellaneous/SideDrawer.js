@@ -31,6 +31,7 @@ import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
+import { HamburgerIcon} from '@chakra-ui/icons'
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
@@ -142,13 +143,13 @@ function SideDrawer() {
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
-            <i className="fas fa-search"></i>
-            <Text d={{ base: "none", md: "flex" }} px={4}>
+            <i className="fas fa-search"><HamburgerIcon /></i>
+            <Text display={{ base: "none", md: "flex" }} px={4}>
               Search User
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
+        <Text fontSize={{base:"23px",md:"2xl"}} fontFamily="Work sans">
         Random Chat
         </Text>
 
